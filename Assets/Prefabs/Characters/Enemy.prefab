@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 1644144248690268537}
   - component: {fileID: 9152045679844615720}
   - component: {fileID: 1776702561841676306}
+  - component: {fileID: 2661651650918601934}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -231,7 +232,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  changeRange: 5
+  changeRange: 10
 --- !u!114 &9152045679844615720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,3 +288,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2661651650918601934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282665735548083372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a46f5b38128fd41a86f7b377120aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  damage: 40

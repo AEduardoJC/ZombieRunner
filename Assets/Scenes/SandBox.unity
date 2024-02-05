@@ -335,6 +335,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!4 &1209351604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3560555265289075163, guid: 959c6989d636ceb4492935af7973988f, type: 3}
+  m_PrefabInstance: {fileID: 6285329850093897880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1246649808
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,14 +597,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 8938020784039863700}
-    - target: {fileID: 1644144248690268537, guid: 83e63fdff8deb0a4dba72255e96c1cc5, type: 3}
-      propertyPath: changeRange
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2955236325976873795, guid: 83e63fdff8deb0a4dba72255e96c1cc5, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 1.5
-      objectReference: {fileID: 0}
+    - target: {fileID: 2661651650918601934, guid: 83e63fdff8deb0a4dba72255e96c1cc5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1209351604}
     - target: {fileID: 3282665735548083372, guid: 83e63fdff8deb0a4dba72255e96c1cc5, type: 3}
       propertyPath: m_Name
       value: Enemy
