@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damage = 30f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
+    [SerializeField] Ammo ammoSlot; 
 
     void Update()
     {
@@ -22,8 +23,12 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
+        if(ammoSlot.GetCurrentAmmo() > 0)
+        {
         PlayMuzzleFlash();
         ProcessRaycast();
+        ammoSlot.ReduceCurrentAmmo();
+        }
 
     }
 

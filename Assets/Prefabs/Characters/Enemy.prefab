@@ -120,8 +120,8 @@ GameObject:
   - component: {fileID: 2955236325976873795}
   - component: {fileID: 1644144248690268537}
   - component: {fileID: 9152045679844615720}
-  - component: {fileID: 1776702561841676306}
   - component: {fileID: 2661651650918601934}
+  - component: {fileID: 1776702561841676306}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -228,7 +228,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -253,7 +253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  changeRange: 10
+  changeRange: 15
+  turnSpeed: 5
 --- !u!114 &9152045679844615720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +267,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9c33c067f022b41a74222a335d063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 200
+--- !u!114 &2661651650918601934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282665735548083372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a46f5b38128fd41a86f7b377120aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 40
 --- !u!95 &1776702561841676306
 Animator:
   serializedVersion: 5
@@ -288,17 +302,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2661651650918601934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282665735548083372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57a46f5b38128fd41a86f7b377120aa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  damage: 40
