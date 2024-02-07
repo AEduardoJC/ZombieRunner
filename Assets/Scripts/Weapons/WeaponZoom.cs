@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaponZoom : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera fpsCamera;
+    [SerializeField] StarterAssets.FirstPersonController fpsController;
     [SerializeField] float zoomedOutFOV = 60f;
     [SerializeField] float zoomedInFOV = 20f;
     [SerializeField] float zoomOutSensitivity = 1f;
@@ -13,11 +14,10 @@ public class WeaponZoom : MonoBehaviour
     //[SerializeField] StarterAssets.FirstPersonController fpsController;
 
     bool zoomedInToggle = false;
-    StarterAssets.FirstPersonController fpsController;
 
-    private void Start()
+    private void OnDisable()
     {
-        fpsController =  GetComponent<StarterAssets.FirstPersonController>();
+        ZoomOut();
     }
 
     private void Update()
@@ -25,17 +25,25 @@ public class WeaponZoom : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            fpsCamera.m_Lens.FieldOfView = zoomedInFOV;
-            fpsController.RotationSpeed = zoomInSensitivity;
+            ZoomIn();
         }
         else if (Input.GetMouseButtonUp(1))
         {
+            ZoomOut();
 
-            fpsCamera.m_Lens.FieldOfView = zoomedOutFOV;
-            fpsController.RotationSpeed = zoomOutSensitivity;
         }
     }
 
+    private void ZoomIn()
+    {
+        fpsCamera.m_Lens.FieldOfView = zoomedInFOV;
+        fpsController.RotationSpeed = zoomInSensitivity;
+    }
 
+    private void ZoomOut()
+    {
+        fpsCamera.m_Lens.FieldOfView = zoomedOutFOV;
+        fpsController.RotationSpeed = zoomOutSensitivity;
+    }
 
 }
